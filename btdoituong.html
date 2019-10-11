@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Frog(name,speed,status) {
+        this.name = name;
+        this.speed = speed;
+        this.status = status;
+        this.getStatus = function () {
+            return this.status;
+        }
+        this.setstatus = function (newStatus) {
+            this.status = newStatus;
+        }
+        this.sound = function (stringFrog) {
+            if (this.status) {
+                console.log(stringFrog);
+            }
+        }
+    }
+    let luffy=new Frog("luffy",30,true);
+    let zoro=new Frog("zoro",35,true);
+    let sanji=new Frog("sanji",40,false);
+    function Snake(name,speed,status) {
+        this.name = name;
+        this.speed = speed;
+        this.sound = function (stringSnake) {
+            console.log(stringSnake);
+        }
+        this.catch = function (frog) {
+            if (this.speed > forg.speed) {
+                console.log("rắn" + this.name + "đã bắt được con ếch " + forg.name);
+            } else {
+                console.log("rắn" + this.name + "không bắt được con ếch " + forg.name);
+            }
+        }
+    }
+    let chopper = new Snake("chopper",50,true);
+
+</script>
+
+</body>
+</html>
